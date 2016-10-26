@@ -13,9 +13,9 @@ public class Parse {
 	public ArrayList<String> currencyData (String choice){
 		
 		ArrayList <String> cData = new ArrayList<>();
-		cData.add("Wybierz walutê...");
-		cData.add("z³oty polski");					
-try {		
+		cData.add("Wybierz walutÃª...");
+		cData.add("zÂ³oty polski");					
+	try {		
 		URL url = new URL("http://www.nbp.pl/kursy/xml/LastA.xml");
 					
 		DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
@@ -42,15 +42,15 @@ try {
 			}
 			if (choice == "converter"){
 			NodeList calculateList = position.getElementsByTagName("przelicznik");
-            Element calculateElement = (Element)calculateList.item(0);
-            NodeList textCalculateList = calculateElement.getChildNodes();
-            cData.add(textCalculateList.item(0).getNodeValue().trim());
+           		 Element calculateElement = (Element)calculateList.item(0);
+           		 NodeList textCalculateList = calculateElement.getChildNodes();
+           		 cData.add(textCalculateList.item(0).getNodeValue().trim());
 			} 
 			if (choice == "course"){
-            NodeList courseList = position.getElementsByTagName("kurs_sredni");
-            Element courseElement = (Element)courseList.item(0);
-            NodeList textKursList = courseElement.getChildNodes();
-            cData.add(textKursList.item(0).getNodeValue().trim());
+           		 NodeList courseList = position.getElementsByTagName("kurs_sredni");
+            		Element courseElement = (Element)courseList.item(0);
+           		 NodeList textKursList = courseElement.getChildNodes();
+           		 cData.add(textKursList.item(0).getNodeValue().trim());
 			}         
 		}							
 	}catch (ParserConfigurationException | SAXException | IOException e) {
