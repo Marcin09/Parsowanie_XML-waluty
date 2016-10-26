@@ -39,7 +39,7 @@ public class Editor extends JFrame implements ActionListener, MouseListener {
 		ImageIcon iconButton = new ImageIcon("Button.png");
 		bCount = new JButton(iconButton);
 		bCount.setBounds(362, 137, 125, 125);
-	    bCount.setBorderPainted(false); 
+	   	bCount.setBorderPainted(false); 
 		bCount.setContentAreaFilled(false);
 		add(bCount);
 		bCount.addActionListener(this);
@@ -49,7 +49,7 @@ public class Editor extends JFrame implements ActionListener, MouseListener {
 		tDatePublication.setBounds(0, 0, 375, 30);
 		tDatePublication.setFont(new Font("SansSerif", Font.ITALIC, 14));
 		tDatePublication.setEditable(false);
-		tDatePublication.setText("Ostatnia data publikacji kursów przez NBP:  " 
+		tDatePublication.setText("Ostatnia data publikacji kursÃ³w przez NBP:  " 
 								+ pars.currencyData("date").get(2).toString());
 		add(tDatePublication);
 		
@@ -58,7 +58,7 @@ public class Editor extends JFrame implements ActionListener, MouseListener {
 		tCurrencyInValue.setFont(new Font("SansSerif", Font.CENTER_BASELINE, 15));
 		ToolTipManager.sharedInstance().setDismissDelay(10000);
 		ToolTipManager.sharedInstance().setInitialDelay(0);
-		tCurrencyInValue.setToolTipText("Podaj kwotê");
+		tCurrencyInValue.setToolTipText("Podaj kwotÃª");
 		tCurrencyInValue.setDocument(new JTextFieldLimit(7));
 		add(tCurrencyInValue);
 		tCurrencyInValue.setActionCommand(iconButton.getDescription());
@@ -114,11 +114,11 @@ public class Editor extends JFrame implements ActionListener, MouseListener {
 		double converterValueIn = 0;
 		
 		for (int i = 0; i<list.size(); i++){
-			if (currencyNameIn.equals(list.get(i)) && currencyNameIn.equals("z³oty polski")) {
+			if (currencyNameIn.equals(list.get(i)) && currencyNameIn.equals("zÂ³oty polski")) {
 			courseValueIn = 1.0;
 			converterValueIn = 1.0;
 			}
-			else if (currencyNameIn.equals(list.get(i)) && !currencyNameIn.equals("Wybierz walutê...")){
+			else if (currencyNameIn.equals(list.get(i)) && !currencyNameIn.equals("Wybierz walutÃª...")){
 			try{
 				if (pars.currencyData("course").get(i).contains(","))
 				courseValueIn = (double) NumberFormat.getInstance().parse(pars.currencyData("course").get(i));
@@ -134,11 +134,11 @@ public class Editor extends JFrame implements ActionListener, MouseListener {
 		double converterValueOut = 0;
 		
 		for (int i = 0; i<list.size(); i++){
-			if (currencyNameOut.equals(list.get(i)) && currencyNameOut.equals("z³oty polski")) {
+			if (currencyNameOut.equals(list.get(i)) && currencyNameOut.equals("zÂ³oty polski")) {
 			courseValueOut = 1.0;
 			converterValueOut = 1.0;
 			}
-			else if (currencyNameOut.equals(list.get(i))  && !currencyNameOut.equals("Wybierz walutê...")){
+			else if (currencyNameOut.equals(list.get(i))  && !currencyNameOut.equals("Wybierz walutÃª...")){
 			try{
 				if (pars.currencyData("course").get(i).contains(","))
 				courseValueOut = (double) NumberFormat.getInstance().parse(pars.currencyData("course").get(i));
