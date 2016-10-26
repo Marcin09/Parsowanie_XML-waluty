@@ -17,6 +17,6 @@ class JTextFieldLimit extends PlainDocument {
 
 		if ((getLength() ) < limit) {
 			super.insertString(offset, str, attr);
-    	}
-  	}
+    		}
+	}
 }
