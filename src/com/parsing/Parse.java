@@ -13,8 +13,8 @@ public class Parse {
 	public ArrayList<String> currencyData (String choice){
 		
 		ArrayList <String> cData = new ArrayList<>();
-		cData.add("Wybierz walutê...");
-		cData.add("z³oty polski");					
+		cData.add("Wybierz walutę...");
+		cData.add("złoty polski");					
 	try {		
 		URL url = new URL("http://www.nbp.pl/kursy/xml/LastA.xml");
 					
