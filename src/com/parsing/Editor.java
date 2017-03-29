@@ -57,7 +57,7 @@ public class Editor extends JFrame implements ActionListener, MouseListener {
 		tCurrencyInValue.setFont(new Font("SansSerif", Font.CENTER_BASELINE, 15));
 		ToolTipManager.sharedInstance().setDismissDelay(10000);
 		ToolTipManager.sharedInstance().setInitialDelay(0);
-		tCurrencyInValue.setToolTipText("Podaj kwotê");
+		tCurrencyInValue.setToolTipText("Podaj kwotę");
 		tCurrencyInValue.setDocument(new JTextFieldLimit(7));
 		add(tCurrencyInValue);
 		tCurrencyInValue.setActionCommand(iconButton.getDescription());
@@ -113,11 +113,11 @@ public class Editor extends JFrame implements ActionListener, MouseListener {
 		double converterValueIn = 0;
 		
 		for (int i = 0; i<list.size(); i++){
-			if (currencyNameIn.equals(list.get(i)) && currencyNameIn.equals("z³oty polski")) {
+			if (currencyNameIn.equals(list.get(i)) && currencyNameIn.equals("złoty polski")) {
 			courseValueIn = 1.0;
 			converterValueIn = 1.0;
 			}
-			else if (currencyNameIn.equals(list.get(i)) && !currencyNameIn.equals("Wybierz walutê...")){
+			else if (currencyNameIn.equals(list.get(i)) && !currencyNameIn.equals("Wybierz walutę...")){
 			try{
 				if (pars.currencyData("course").get(i).contains(","))
 				courseValueIn = (double) NumberFormat.getInstance().parse(pars.currencyData("course").get(i));
@@ -133,11 +133,11 @@ public class Editor extends JFrame implements ActionListener, MouseListener {
 		double converterValueOut = 0;
 		
 		for (int i = 0; i<list.size(); i++){
-			if (currencyNameOut.equals(list.get(i)) && currencyNameOut.equals("z³oty polski")) {
+			if (currencyNameOut.equals(list.get(i)) && currencyNameOut.equals("złoty polski")) {
 			courseValueOut = 1.0;
 			converterValueOut = 1.0;
 			}
-			else if (currencyNameOut.equals(list.get(i))  && !currencyNameOut.equals("Wybierz walutê...")){
+			else if (currencyNameOut.equals(list.get(i))  && !currencyNameOut.equals("Wybierz walutę...")){
 			try{
 				if (pars.currencyData("course").get(i).contains(","))
 				courseValueOut = (double) NumberFormat.getInstance().parse(pars.currencyData("course").get(i));
