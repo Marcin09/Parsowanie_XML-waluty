@@ -18,7 +18,6 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 import javax.swing.ToolTipManager;
-import javax.swing.plaf.ToolTipUI;
 
 public class Editor extends JFrame implements ActionListener, MouseListener {
 	
