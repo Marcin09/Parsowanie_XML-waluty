@@ -1,4 +1,4 @@
-package com.parsin;
+package com.parsing;
 
 import java.io.IOException;
 import java.net.URL;
