@@ -1,4 +1,4 @@
-package com.parsin;
+package com.parsing;
 
 import java.awt.Color;
 import java.awt.Font;
