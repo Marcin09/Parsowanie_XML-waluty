@@ -1,4 +1,4 @@
-package com.parsing;
+package com.parsin;
 
 import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
